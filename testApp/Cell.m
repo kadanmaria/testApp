@@ -10,39 +10,40 @@
 
 @implementation Cell
 
--(instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
+- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
-        self.titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(130, 10, 120, 50)];
-        self.subTitleLabel = [[UILabel alloc] initWithFrame:CGRectMake(130, 65, 120, 50)];
-        self.photo = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 120, 120)];
+        UILabel *titleLabel = [[UILabel alloc] init];
+        UILabel *subTitleLabel = [[UILabel alloc] init];
+        UIImageView *photo = [[UIImageView alloc] init];
+        self.titleLabel = titleLabel;
+        self.subTitleLabel = subTitleLabel;
+        self.photo = photo;
 
         [self.contentView addSubview:self.titleLabel];
         [self.contentView addSubview:self.subTitleLabel];
         [self.contentView addSubview:self.photo];
         
-        [self autorelease];
-        [self.titleLabel release];
-        [self.subTitleLabel release];
-        [self.photo release];
+        [titleLabel release];
+        [subTitleLabel release];
+        [photo release];
     }
     return self;
 }
 
--(void)prepareForReuse {
+- (void)prepareForReuse {
     [super prepareForReuse];
     self.titleLabel.text = nil;
     self.subTitleLabel.text = nil;
     self.photo.image = nil;
 }
 
-//-(void)layoutSubviews {
-//    [super layoutSubviews];
-//    self.titleLabel.frame = CGRectMake(130, 10, 120, 50);
-//    self.subTitleLabel.frame = CGRectMake(130, 65, 120, 50);
-//    self.photo.frame = CGRectMake(0, 0, 120, 120);
-//}
-
--(void)setCell:(Cell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
-    
+- (void)layoutSubviews {
+    [super layoutSubviews];
+    CGFloat height = self.bounds.size.height;
+    CGFloat width = self.bounds.size.width;
+    self.titleLabel.frame = CGRectMake(height + height/12, height/8, width - (height + height/12), height/4);
+    self.subTitleLabel.frame = CGRectMake(height + height/12, 5*height/8, width - (height + height/12), height/4);
+    self.photo.frame = CGRectMake(0, 0, height, height);
 }
+
 @end

@@ -36,6 +36,8 @@
     [super didReceiveMemoryWarning];
 }
 
+#pragma mark - Delegate Implementation
+
 - (void)tableView:(UITableView *)tableView willDisplayCell:(Cell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
     NSDictionary *dictionary = [self.plistArray objectAtIndex:indexPath.row];
     cell.titleLabel.text = [dictionary objectForKey:@"title"];
@@ -45,8 +47,8 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
- //   return [[UIImage imageNamed:[[self.plistArray objectAtIndex:indexPath.row] objectForKey:@"image_name"]] size].height;
-    return 120;
+    return [[UIImage imageNamed:[[self.plistArray objectAtIndex:indexPath.row] objectForKey:@"image_name"]] size].height/2;
+  //  return 120;
 }
 
 #pragma mark - DataSourse Implementation
@@ -58,9 +60,6 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *cellIdentifier = @"Cell";
     Cell *cell = (Cell *)[tableView dequeueReusableCellWithIdentifier:cellIdentifier];
-    if(!cell) {
-          cell = [[Cell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
-    }
     return cell;
 }
 
