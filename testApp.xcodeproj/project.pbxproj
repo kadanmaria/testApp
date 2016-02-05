@@ -10,6 +10,7 @@
 		842C377C1C6002AC0055A781 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C377B1C6002AC0055A781 /* main.m */; };
 		842C377F1C6002AC0055A781 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C377E1C6002AC0055A781 /* AppDelegate.m */; };
 		842C37961C60045E0055A781 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C37951C60045E0055A781 /* MainViewController.m */; settings = {ASSET_TAGS = (); }; };
+		8475BB181C624330007C9636 /* Cell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8475BB171C624330007C9636 /* Cell.m */; settings = {ASSET_TAGS = (); }; };
 		84E61AA31C60E6000038F52C /* Data.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84E61AA21C60E6000038F52C /* Data.plist */; settings = {ASSET_TAGS = (); }; };
 		84E61AA51C60EACD0038F52C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84E61AA41C60EACD0038F52C /* Assets.xcassets */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
@@ -22,6 +23,8 @@
 		842C378B1C6002AC0055A781 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		842C37941C60045E0055A781 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		842C37951C60045E0055A781 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		8475BB161C624330007C9636 /* Cell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cell.h; sourceTree = "<group>"; };
+		8475BB171C624330007C9636 /* Cell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cell.m; sourceTree = "<group>"; };
 		84E61AA21C60E6000038F52C /* Data.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Data.plist; sourceTree = "<group>"; };
 		84E61AA41C60EACD0038F52C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -58,6 +61,8 @@
 			children = (
 				842C377D1C6002AC0055A781 /* AppDelegate.h */,
 				842C377E1C6002AC0055A781 /* AppDelegate.m */,
+				8475BB161C624330007C9636 /* Cell.h */,
+				8475BB171C624330007C9636 /* Cell.m */,
 				842C37941C60045E0055A781 /* MainViewController.h */,
 				842C37951C60045E0055A781 /* MainViewController.m */,
 				84E61AA21C60E6000038F52C /* Data.plist */,
@@ -147,6 +152,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				842C377F1C6002AC0055A781 /* AppDelegate.m in Sources */,
+				8475BB181C624330007C9636 /* Cell.m in Sources */,
 				842C37961C60045E0055A781 /* MainViewController.m in Sources */,
 				842C377C1C6002AC0055A781 /* main.m in Sources */,
 			);
