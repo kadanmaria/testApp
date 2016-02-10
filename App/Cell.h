@@ -10,8 +10,9 @@
 
 @interface Cell : UITableViewCell
 
-@property (nonatomic, retain) UILabel *titleLabel;
-@property (nonatomic, retain) UILabel *subTitleLabel;
-@property (nonatomic, retain) UIImageView *photo;
+
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+@property (weak, nonatomic) IBOutlet UILabel *subTitleLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *photo;
 
 @end

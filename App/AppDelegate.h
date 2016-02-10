@@ -1,8 +1,8 @@
 //
 //  AppDelegate.h
-//  testApp
+//  App
 //
-//  Created by Admin on 01.02.16.
+//  Created by Admin on 07.02.16.
 //  Copyright © 2016 OrgName. All rights reserved.
 //
 
@@ -11,6 +11,7 @@
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+
 
 @end
 

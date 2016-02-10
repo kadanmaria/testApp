@@ -1,17 +1,14 @@
 //
 //  AppDelegate.m
-//  testApp
+//  App
 //
-//  Created by Admin on 01.02.16.
+//  Created by Admin on 07.02.16.
 //  Copyright © 2016 OrgName. All rights reserved.
 //
 
-
 #import "AppDelegate.h"
-#import "MainViewController.h"
 
 @interface AppDelegate ()
-
 
 @end
 
@@ -19,18 +16,7 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    
-    UIWindow *window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    self.window = window;
-    self.window.backgroundColor = [UIColor whiteColor];
-    
-    MainViewController *viewController = [[MainViewController alloc] init];
-    self.window.rootViewController = viewController;
-    [self.window makeKeyAndVisible];
-    
-    [window release];
-    [viewController release];
-    
+    // Override point for customization after application launch.
     return YES;
 }
 
